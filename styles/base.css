@@ -2,7 +2,7 @@ body {
     display: grid;
     grid-template: auto auto auto / 1fr;
     margin: 0;
-    height: 100vh
+    height: 100vh;
 }
 
 h1 {
@@ -45,6 +45,7 @@ main {
     display: grid;
     grid-template: 1fr / 1fr 1fr 1fr;
     margin: 0;
+    max-width: 100%;
 }
 
 .card h2 {
@@ -106,7 +107,7 @@ main {
     align-items: center;
     padding: 1rem 3rem;
     margin: 0;
-}   
+}
 
 .section2 {
     grid-row: 3/4;
