@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+header {
+    background-color: rgb(55, 0, 55);
+    display: grid;
+    grid-gap: 1rem;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+header p {
+    font-size: 2rem;
+}
+
+.navigation {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.navigation a {
+    display: none;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: larger;
+}
+
+nav a:hover {
+    text-decoration: underline double;
+    background-color: #eee;
+    color: #000;
+}
+
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    text-decoration: none;
+}
+
+#menu::before {
+    content: "☰";
+    color: white;
+    font-size: 2.5rem;
+}
+
+.show a {
+    display: block;
+}
+
+.show p {
+    display: none;
+}
+
+#menu.show::before {
+    content: "X";
+}
+
+main {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+main h1 {
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+section {
+    margin: 1rem auto;
+    padding: .5rem;
+}
+
+.temple-gallery {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 20px;
+    padding: 1rem;
+    place-items: center;
+}
+
+.temple-gallery img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+figcaption {
+    font-size: smaller;
+    text-align: center;
+    padding: 10px;
+}
+
+footer {
+    background-color: rgb(55, 0, 55);
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    font-family: "Roboto", sans-serif;
+    padding: 1rem;
+}
