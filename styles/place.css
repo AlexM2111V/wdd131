@@ -1,0 +1,145 @@
+:root {
+    --primary-color: #990021;
+    --secondary-color: white;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 0.7rem 0;
+    border-bottom: 20px solid var(--secondary-color);
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.background-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: solid 8px var(--primary-color);
+}
+
+.info-box h2 {
+    color: black;
+    padding: 1rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.weather {
+    margin: 3rem;
+}
+
+.weather img {
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: 0 auto;
+}
+
+.weather h2 {
+    padding: 0;
+    margin: 0;
+}
+
+.weather h2::after {
+    content: "";
+}
+
+.info-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.info-box li {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 0.5rem;
+    ;
+}
+
+li {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+}
+
+.label {
+    font-weight: bold;
+    text-align: right;
+}
+
+.value {
+    text-align: left;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.3rem;
+}
+
+footer p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* large view navigation ************************************/
+@media (min-width: 37.5em) {
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .info-box {
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.85);
+        padding: 1rem;
+        border-radius: 5px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        width: 350px;
+    }
+
+    .info-box h2 {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 1rem;
+        text-align: left;
+        margin: 0 0 0 -2rem;
+    }
+
+    .hero {
+        position: relative;
+        text-align: center;
+    }
+
+    .data {
+        top: 5%;
+        left: 5%;
+    }
+
+    .weather {
+        bottom: 5%;
+        right: 5%;
+        padding: 1rem;
+    }
+
+    .weather img {
+        display: none;
+    }
+
+    .weather h2::after {
+        content: " ⛅";
+    }
+
+}
