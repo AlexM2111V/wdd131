@@ -1,0 +1,162 @@
+:root {
+    --primary-color: rgb(55, 0, 55);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+header {
+    background-color: var(--primary-color);
+    display: grid;
+    grid-gap: 1rem;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.navigation {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.navigation a {
+    display: none;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+nav a:hover {
+    text-decoration: underline double;
+    background-color: #eee;
+    color: #000;
+}
+
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    text-decoration: none;
+}
+
+#menu::before {
+    content: "☰";
+    color: white;
+    font-size: 2.5rem;
+}
+
+.show a {
+    display: block;
+}
+
+.show h1 {
+    display: none;
+}
+
+#menu.show::before {
+    content: "X";
+}
+
+main {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+main h2 {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+div {
+    padding: 1rem;
+}
+
+.temple-gallery {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 20px;
+    place-items: center;
+}
+
+.temple-gallery section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.207);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.temple-gallery img {
+    width: 400px;
+    height: 250px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.label {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--primary-color);
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+figcaption {
+    font-size: smaller;
+    text-align: center;
+    padding: 10px;
+}
+
+footer {
+    background-color: rgb(55, 0, 55);
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    padding: 1rem;
+}
+
+@media screen and (min-width: 740px) {
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navigation a {
+        display: block;
+        flex: 1 1 100%;
+    }
+
+    #menu {
+        display: none;
+    }
+
+}
