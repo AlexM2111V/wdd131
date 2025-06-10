@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alexander Mendoza">
+    <meta name="description" content="W05 Assignment: Product Review Form">
+    <title>Product Review Form</title>
+    <link href="styles/form.css" rel="stylesheet">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form method="get" action="review.html" class="product-review">
+            <label>Product Name<select id="product" name="product" required>
+                    <option value="" disabled selected>Select a Product ...</option>
+                </select>
+            </label>
+            <p>Overall Rating</p>
+            <div class="rating-group">
+                <label>⭐️<input type="radio" id="onestar" name="rating" required></label>
+                <label>⭐️⭐️<input type="radio" id="twostars" name="rating" required></label>
+                <label>⭐️⭐️⭐️<input type="radio" id="threestars" name="rating" required></label>
+                <label>⭐️⭐️⭐️⭐️<input type="radio" id="fourstars" name="rating" required></label>
+                <label>⭐️⭐️⭐️⭐️⭐️<input type="radio" id="fivestars" name="rating" required></label>
+            </div>
+            <label>Date of Installation<input type="date" id="installationDate" name="installationDate" required></label>
+            <p>Which features did you find useful in the product?</p>
+            <p class="italic">(Check all that apply)</p>
+            <div class="options">
+                <label><input type="checkbox" id="durability" name="durability" value="yes">Durability</label>
+                <label><input type="checkbox" id="ease-of-use" name="easeOfUse" value="yes">Ease of Use</label>
+                <label><input type="checkbox" id="performance" name="performance" value="yes">Performance</label>
+                <label><input type="checkbox" id="design" name="design" value="yes">Design</label>
+            </div>
+            <label>
+                Written Review <span class="optional">(Optional)</span>
+                <textarea id="writtenReview" name="writtenReview" rows="5" cols="50"></textarea>
+            </label>
+            <label>
+                Your Name <span class="optional">(Optional)</span>
+                <input type="text" id="username" name="userName">
+            </label>
+            <input type="submit" value="Post Review">
+        </form>
+    </main>
+    <footer>
+            <p>&copy; <span id="currentYear"></span> Alexander Mendoza - Perú</p>
+            <p id="lastModified"></p>
+    </footer>
+    </body>
+
+</html>
