@@ -1,0 +1,272 @@
+:root {
+    --primary-color: #1e8449;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+header {
+    background: var(--primary-color);
+    padding: 20px;
+    display: grid;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.logo span {
+    color: #ffffff;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.navigation a {
+    display: none;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.navigation li {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.navigation.stack a {
+    display: block;
+}
+
+.navigation a.active {
+    text-decoration: underline;
+}
+
+#menu {
+    position: absolute;
+    top: 0.7rem;
+    right: 1rem;
+    text-decoration: none;
+}
+
+#menu::before {
+    content: "☰";
+    color: white;
+    font-size: 2.5rem;
+}
+
+#menu.show::before {
+    content: "X";
+}
+
+.hide {
+    display: none;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+    gap: 2rem;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-size: 1.8rem;
+    margin: 0.5rem 2rem;
+    text-align: center;
+}
+
+.hero-text p {
+    margin: 1rem;
+}
+
+/* .hero-text button { */
+.book-button {
+    background-color: var(--primary-color);
+    ;
+    border: none;
+    color: white;
+    padding: 1rem 1.5rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 100%;
+}
+
+/* Benefits Section */
+.benefits {
+    background-color: var(--primary-color);
+    ;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.benefit {
+    text-align: center;
+    margin: 1rem 0;
+    max-width: 300px;
+}
+
+.icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.benefit h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+/* Footer */
+footer {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #333;
+    margin: 5rem 1rem;
+}
+
+.footer-links li {
+    margin: 0.2rem 0;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+
+    header {
+        padding: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .logo {
+        font-size: 2rem;
+        padding: 0 3rem;
+    }
+
+    .navigation {
+        flex-direction: row;
+    }
+
+    .navigation a {
+        display: flex;
+        font-size: 1.5rem;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hero-text {
+        flex: 1;
+        max-width: 50%;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1.2rem;
+        ;
+        margin: 1rem 4rem;
+    }
+
+    .hero-image {
+        flex: 1;
+        margin-left: 2rem;
+    }
+
+    .benefits {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .benefit {
+        padding: 0 2rem;
+    }
+
+    footer {
+        margin-top: 2rem;
+    }
+
+    .footer-links {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .footer-links a {
+        padding: 0 4rem;
+        margin: 0;
+    }
+
+    .footer-links li:not(:last-child) a {
+        border-right: 1px solid black;
+    }
+
+    footer p:not(:last-child) {
+        padding-top: 2rem;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+}

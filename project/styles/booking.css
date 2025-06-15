@@ -1,0 +1,313 @@
+:root {
+    --primary-color: #1e8449;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+header {
+    background: var(--primary-color);
+    padding: 20px;
+    display: grid;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.logo span {
+    color: #ffffff;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.navigation a {
+    display: none;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.navigation li {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.navigation.stack a {
+    display: block;
+}
+
+.navigation a.active {
+    text-decoration: underline;
+}
+
+#menu {
+    position: absolute;
+    top: 0.7rem;
+    right: 1rem;
+    text-decoration: none;
+}
+
+#menu::before {
+    content: "☰";
+    color: white;
+    font-size: 2.5rem;
+}
+
+#menu.show::before {
+    content: "X";
+}
+
+.hide {
+    display: none;
+}
+
+main {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+label {
+    display: block;
+    margin: .5rem 0;
+}
+
+.product-review select,
+.product-review input[type="date"],
+.product-review input[type="time"],
+.product-review input[type="number"],
+.product-review input[type="text"],
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin-top: .2rem;
+    height: 44px;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+#username {
+    margin-bottom: 1.2rem;
+}
+
+#booking-time{
+    margin-bottom: 1.2rem;
+}
+
+#duration{
+    margin-bottom: 1.2rem;
+}
+
+.check-off{
+    max-width: 400px;
+}
+
+select {
+    margin-bottom: 1.5rem;
+}
+
+.product-review input[type="checkbox"] {
+    margin-left: .3rem;
+    margin-right: .5rem;
+    transform: scale(1.5);
+}
+
+.options {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.product-review input[type="radio"] {
+    margin-top: .5rem;
+    margin: 0;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    margin-bottom: 1.3rem;
+    margin-top: .2rem;
+    padding: .5rem;
+}
+
+.product-review label,
+.product-review p {
+    font-weight: bold;
+}
+
+.product-review input[type="date"] {
+    margin-bottom: 1.5rem;
+}
+
+p {
+    margin: 0;
+}
+
+.italic {
+    font-style: italic;
+    margin-bottom: .7rem;
+    margin-top: .3rem;
+}
+
+.optional {
+    color: var(--primary-color);
+    font-size: .8rem;
+}
+
+input[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    padding: .5rem 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    border-radius: 10px;
+}
+
+input[type="submit"]{
+    padding: 1rem;
+    height: 100%;
+    font-size: 1rem;
+}
+
+
+footer {
+    padding: 1rem 1rem;
+    text-align: center;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #333;
+    margin: 5rem 1rem;
+}
+
+.footer-links li {
+    margin: 0.2rem 0;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+
+    header {
+        padding: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .logo {
+        font-size: 2rem;
+        padding: 0 3rem;
+    }
+
+    .navigation {
+        flex-direction: row;
+    }
+
+    .navigation a {
+        display: flex;
+        font-size: 1.5rem;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hero-text {
+        flex: 1;
+        max-width: 50%;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1.2rem;
+        ;
+        margin: 1rem 4rem;
+    }
+
+    .hero-image {
+        flex: 1;
+        margin-left: 2rem;
+    }
+
+    .benefits {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .benefit {
+        padding: 0 2rem;
+    }
+
+    footer {
+        margin-top: 2rem;
+    }
+
+    .footer-links {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .footer-links a {
+        padding: 0 4rem;
+        margin: 0;
+    }
+
+    .footer-links li:not(:last-child) a {
+        border-right: 1px solid black;
+    }
+
+    footer p:not(:last-child) {
+        padding-top: 2rem;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+}

@@ -1,7 +1,7 @@
 document.getElementById("currentYear").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
 
-const mainnav = document.querySelector('.navigation');
+const mainnav = document.querySelector('.navigation a');
 const hambutton = document.querySelector('#menu');
 const headerTitle = document.querySelector('header');
 

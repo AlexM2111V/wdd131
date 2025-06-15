@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alexander Mendoza">
+    <meta name="description"
+        content="Rent-a-Goal is a web application that allows users to book soccer fields online. It provides an easy and efficient way to reserve fields for matches or practice sessions.">
+    <title>Booking</title>
+    <link rel="stylesheet" href="styles/booking.css">
+    <script src="scripts/booking.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">Rent-a-<span>Goal</span></div>
+        <a id="menu" href="#" aria-label="Main menu"></a>
+        <nav>
+            <ul class="navigation">
+                <li><a href="project.html">Home</a></li>
+                <li><a href="fields.html">Fields</a></li>
+                <li><a href="booking.html" class="active">Booking</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form method="get" action="booked-confirmation.html" class="product-review">
+            <label>
+                Your Name<input type="text" id="username" name="userName" required>
+            </label>
+            <label>Field<select id="field" name="field" required>
+                    <option value="" disabled selected>Select a Field ...</option>
+                </select>
+            </label>
+            <label>Date of Play<input type="date" id="dateOfPlay" name="dateOfPlay" required></label>
+            <label>Choose a time:<input type="time" id="booking-time" name="booking-time" required></label>
+            <label>How many hours?<input type="number" id="duration" name="duration" min="1" max="12" required></label>
+            <p class="check-off">Want us to take care of the details? Just check off what you’d like us to provide for your match.</p>
+            <p class="italic optional">(Check all that apply)</p>
+            <div class="options">
+                <label><input type="checkbox" id="referee" name="referee" value="yes">Referee</label>
+                <label><input type="checkbox" id="soccer-ball" name="soccer-ball" value="yes">Soccer ball</label>
+                <label><input type="checkbox" id="corner-flag" name="corner-flag" value="yes">Corner flags</label>
+                <label><input type="checkbox" id="whistle" name="whistle" value="yes">Whistle</label>
+                <label><input type="checkbox" id="pinnies" name="pinnies" value="yes">Pinnies</label>
+            </div>
+            <label>
+                Notes <span class="optional">(Optional)</span>
+                <textarea id="notes" name="notes" rows="5" cols="50"></textarea>
+            </label>
+            <input type="submit" value="BOOK FIELD">
+        </form>
+    </main>
+    <footer>
+        <ul class="footer-links">
+            <li><a href="#">Features</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Download</a></li>
+        </ul>
+        <p>1717 Harrison St, San Francisco, CA 94103, USA</p>
+        <p>&copy; <span id="currentYear"></span> Rent-a-Goal. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

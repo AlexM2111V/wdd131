@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alexander Mendoza">
+    <meta name="description"
+        content="Rent-a-Goal is a web application that allows users to book soccer fields online. It provides an easy and efficient way to reserve fields for matches or practice sessions.">
+    <title>Rent-a-Goal</title>
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">Rent-a-<span>Goal</span></div>
+        <a id="menu" href="#" aria-label="Main menu"></a>
+        <nav>
+            <ul class="navigation">
+                <li><a href="project.html" class="active">Home</a></li>
+                <li><a href="fields.html">Fields</a></li>
+                <li><a href="booking.html">Booking</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Book your Field. <br> Play Your Game.</h1>
+            <p>
+                Reserve premium soccer fields in just a few clicks. Whether it’s a match with friends or a league game,
+                we’ve got you
+                covered.
+            </p>
+            <button class="book-button">BOOK A FIELD NOW</button>
+        </div>
+        <div class="hero-image">
+            <picture>
+                <source srcset="images/soccerfield.webp" media="(min-width: 768px)">
+                <img src="images/soccerfield-small.webp" alt="soccer-field">
+            </picture>
+        </div>
+    </section>
+    <section class="benefits">
+        <div class="benefit">
+            <div class="icon">⚡️</div>
+            <h2>Instant Online Booking</h2>
+            <p>
+                Secure your preferred field time from your phone or computer—no calls, no hassle.
+            </p>
+        </div>
+        <div class="benefit">
+            <div class="icon">⚽️</div>
+            <h2>High-Quality Turf Fields</h2>
+            <p>
+                Play on well-maintained turf fields designed for both casual and competitive matches.
+            </p>
+        </div>
+        <div class="benefit">
+            <div class="icon">💲</div>
+            <h2>Affordable Rates & Packages</h2>
+            <p>
+                Choose from hourly rates or group packages tailored to your needs and budget.
+            </p>
+        </div>
+    </section>
+    </main>
+    <footer>
+        <ul class="footer-links">
+            <li><a href="#">Features</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Download</a></li>
+        </ul>
+        <p>1717 Harrison St, San Francisco, CA 94103, USA</p>
+        <p>&copy; <span id="currentYear"></span> Rent-a-Goal. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
